@@ -1,0 +1,12 @@
+[
+  {"id":"rec_0001","description":"Lunch","amount":5000,"category":"Food","date":"2026-10-01"},
+  {"id":"rec_0002","description":"Bus fare","amount":1000,"category":"Transport","date":"2026-10-02"},
+  {"id":"rec_0003","description":"Notebook","amount":2500,"category":"School","date":"2026-10-03"},
+  {"id":"rec_0004","description":"Coffee","amount":1500,"category":"Food","date":"2026-10-04"},
+  {"id":"rec_0005","description":"Internet","amount":8000,"category":"Bills","date":"2026-10-05"},
+  {"id":"rec_0006","description":"Taxi","amount":4000,"category":"Transport","date":"2026-10-06"},
+  {"id":"rec_0007","description":"Books","amount":7000,"category":"School","date":"2026-10-07"},
+  {"id":"rec_0008","description":"Dinner","amount":6000,"category":"Food","date":"2026-10-08"},
+  {"id":"rec_0009","description":"Printing","amount":2000,"category":"School","date":"2026-10-09"},
+  {"id":"rec_0010","description":"Water","amount":1000,"category":"Bills","date":"2026-10-10"}
+]

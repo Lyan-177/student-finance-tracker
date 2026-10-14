@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker Tests</title>
+</head>
+<body>
+    <h1>
+        Finance Tracker Tests
+    </h1>
+    <p id="result">Running tests...</p>
+
+    <script type="module">
+        import {
+            validDescription,
+            validAmount,
+            validDate,
+            validCategory,
+            hasDuplicateWord
+        } from "./scripts/validators.js";
+        const tests = [
+            validDescription("Lunch")
+            validAmount("5000.50")
+            validCategory("Food")
+            validDate("2026-10-14")
+            hasDuplicateWord("food food")
+        ]:
+
+    document.queryselector("#result").textContent = 
+        tests.every(Boolean) ? "All tests passed." : "some tests failed";
+
+    </script>
+</body>
+</html>

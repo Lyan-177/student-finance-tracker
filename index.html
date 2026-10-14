@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+        <h1>Student Finance Tracker</h1>
+        <p>Track your spending and manage your budget</p>
+    </header>
+    <nav arial-label="Main navigation">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#transaction">Transactions</a>
+        <a href="#add">Add Transaction</a>
+        <a href="#settings">Settings</a>
+    </nav>
+    <main id="main">
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="stats">
+                <article>
+                    <h3>Total Records</h3>
+                    <p id="total-spending">0.00</p>
+                </article>
+                <article>
+                    <h3>Top-category</h3>
+                    <p id="top-category">None</p>
+                </article>
+                <article>
+                    <h3>Last 7 days</h3>
+                    <p id="seven-day-trend">0.00</p>
+                </article>
+                <article>
+                    <h3>Budget</h3>
+                    <p id="budget-status">Not set</p>
+                </article>
+            </div>
+            <p id="Live-status" aria-live="polite">Ready.</p>
+        </section>
+        <section id="Transaction">
+            <h2>Transactions</h2>
+            <label for="search-input">Search</label>
+            <input type="search" id="search-input" placeholder="Search transactions">
+            <label>
+                <input type="checkbox" id="case-insensitive">
+                Case-insensitive
+            </label>
+            <label for="sort-select">Sort</label>
+            <select id="sort-select">
+                <option value="date-desc">Newest</option>
+                <option value="date-asc">Oldest</option>
+                <option value="amount-desc">Highest Amount</option>
+                <option value="amount-asc">Lowest Amount</option>
+                <option value="description">Description</option>
+                <option value="category">Category</option>
+            </select>
+
+            <table>
+                <caption>Student Transactions</caption>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-list"></tbody>
+            </table>
+            <p id="No transactions">No transactions found.</p>
+        </section>
+        <section id="add">
+            <h2>Add Transaction</h2>
+            <form id="transaction-form">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" required>
+
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" step="0.01" required>
+
+                <label for="category">Category</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+        <section id="settings">
+            <h2>Settings</h2>
+            <form id="settings-form">
+                <label for="budget">Budget Cap</label>
+                <input type="text" id="budget-cap" inputmode="decimal">
+                <label for="base-currency">Currency</label>
+                <select id="base-currency">
+                    <option value="USD">USD</option>
+                    <option value="RWF">RWF</option>
+                    <option value="EUR">EUR</option>
+                </select>
+                <label for="currency-rate-1">Currency Rate 1</label>
+                <input type="text" id="currency-rate-1">
+                <label for="currency-rate-2">Currency Rate 2</label>
+                <input type="text" id="currency-rate-2">
+                <button type="submit">Save Settings</button>
+            </form>
+            <hr>
+            <label for="json-import">Import JSON</label>
+            <input type="file" id="json-import" accept=".json/application/json">
+            <button type="button" id="export-json">Export JSON</button>
+            <p id="import-message" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer>
+        <p>Student Finance Tracker &copy; 2026</p>
+    </footer>
+    <script type="module" src="scripts/ui.js"></script>
+</body>
+</html>
