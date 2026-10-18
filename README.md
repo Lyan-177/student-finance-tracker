@@ -26,6 +26,11 @@ A responsive web app for students to track expenses and manage their budget.
 
 Open `index.html` in a browser or use VS Code Live Server.
 
+## Links for the video submission and the live website
+
+Live website: https://lyan-177.github.io/student-finance-tracker/?utm_source=chatgpt.com#main
+Video: https://youtu.be/mQURo1l-s3c
+
 ## Author
 
 MURARA Lyan
